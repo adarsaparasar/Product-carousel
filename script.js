@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     brand.classList.add('card-flex-ele');
                     const price = document.createElement('p');
                     
-                    price.innerHTML = `Rs ${product.price} <span class="old-price" style="font-family: Khula;font-weight:600px;margin: 0px;">Rs ${product.compare_at_price}</span> <pre class="discount card-grid-ele" style="font-family: Khula;font-weight:600px;margin:0px;">${calculateDiscount(product.price, product.compare_at_price)}% Off</pre>`;
+                    price.innerHTML = `Rs ${product.price} <span class="old-price class-grid-ele" style="font-family: Khula;font-weight:600px;margin: 0px;">Rs ${product.compare_at_price}</span> <pre class="discount card-grid-ele" style="font-family: Khula;font-weight:600px;margin:0px;">${calculateDiscount(product.price, product.compare_at_price)}% Off</pre>`;
                     card.appendChild(price);
                     
 
