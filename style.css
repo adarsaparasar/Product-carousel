@@ -168,7 +168,7 @@ a:active {
 
 @media (max-width:1025px) {
   .tabs {
-    flex-direction: column;
+    flex-direction: row;
   }
 
   .carousel-container {
@@ -208,6 +208,7 @@ body {
 }
   .tabs{
   margin-top: 10px;
+  flex-direction: row;
     width: 50%;
   }
   .carousel-container {
