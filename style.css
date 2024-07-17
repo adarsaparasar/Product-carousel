@@ -75,15 +75,14 @@ a:active {
 }
 
 .tab-btn.active {
-  background-color: #000;
-  
+  background-color: #000;  
   color: #fff;
 }
 
 .carousel {
   display: flex;
   justify-content: center;
-  overflow-x: auto;
+  overflow:visible;
   scroll-snap-type: x mandatory;
   padding: 10px 0;
 }
