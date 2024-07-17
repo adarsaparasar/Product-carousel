@@ -2,6 +2,8 @@
 
 A dynamic product carousel built with HTML, CSS, and JavaScript, fetching data from an external API. The carousel is fully responsive and adjusts its layout for different screen sizes, providing a smooth user experience on desktops, tablets, and mobile devices.
 
+- Check this deployed project here: https://hilarious-trifle-c642b8.netlify.app/
+
 ## Features
 
 - Fetches product data from a JSON API
