@@ -32,25 +32,21 @@ document.addEventListener('DOMContentLoaded', () => {
                         name.textContent = product.title;
                     }
                     
-                    card.appendChild(name);
-                    name.style.fontFamily = "Khula, sans-serif";
-                    name.style.fontWeight = "600px";
-                    name.style.fontSize = '15px';
-                    name.classList.add('card-flex-ele');
+                    //card.appendChild(name);
+                    
+                    
                     const brand = document.createElement('p');
-                    brand.innerHTML = `<span class='card-flex-ele'>&#x2022; ${product.vendor}</span> `;
+                    brand.innerHTML = `<span class='card-flex-ele' style='font-family: Khula;font-weight:400px; font-size:15px;'><strong>${name.textContent}</strong>&nbsp &#x2022; ${product.vendor}</span> `;
 
                     
                     
                     card.appendChild(brand);
-                    brand.style.fontFamily = "Khula, sans-serif";
-                    brand.style.fontWeight = "400px";
-                    brand.style.marginTop = '0px';
+                  
                     brand.classList.add('card-flex-ele');
                     const price = document.createElement('p');
                     price.style.fontFamily = 'khula';
                     price.style.fontWeight = "600px";
-                    price.innerHTML = `<strong>Rs ${product.price}</strong> <span class="old-price class-grid-ele" style="font-family: Khula;font-weight:600px;margin: 0px;">Rs ${product.compare_at_price}</span> <pre class="discount card-grid-ele" style="font-family: Khula;font-weight:600px;margin:0px;">${calculateDiscount(product.price, product.compare_at_price)}% Off</pre>`;
+                    price.innerHTML = `<span><strong>Rs ${product.price}</strong> <span class="old-price" style="font-family: Khula;font-weight:600px;margin: 0px;">Rs ${product.compare_at_price}</span> <pre class="discount " style="font-family: Khula;font-weight:600px;margin:0px;">${calculateDiscount(product.price, product.compare_at_price)}% Off</pre></span>`;
                     card.appendChild(price);
                     
 
