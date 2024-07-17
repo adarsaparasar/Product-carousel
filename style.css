@@ -163,7 +163,9 @@ a:active {
   font-size: 0.8em;
   border-radius: 5px;
 }
-
+.label:hover{
+  opacity: 0.5;
+}
 
 
 
@@ -191,6 +193,9 @@ a:active {
 
   .card p {
     font-size: 1em;
+  }
+  .label:hover{
+    opacity: 0.5;
   }
 }
 
@@ -279,6 +284,9 @@ body {
     left: 10px;
     font-size: 0.8em;
     border-radius: 5px;
+  }
+  .label:hover{
+    opacity: 0.5;
   }
   .cart-btn {
     background-color: #000;
