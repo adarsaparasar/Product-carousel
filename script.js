@@ -48,7 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     brand.style.marginTop = '0px';
                     brand.classList.add('card-flex-ele');
                     const price = document.createElement('p');
-                    
+                    price.style.fontFamily = 'khula';
+                    price.style.fontWeight = "600px";
                     price.innerHTML = `Rs ${product.price} <span class="old-price class-grid-ele" style="font-family: Khula;font-weight:600px;margin: 0px;">Rs ${product.compare_at_price}</span> <pre class="discount card-grid-ele" style="font-family: Khula;font-weight:600px;margin:0px;">${calculateDiscount(product.price, product.compare_at_price)}% Off</pre>`;
                     card.appendChild(price);
                     
