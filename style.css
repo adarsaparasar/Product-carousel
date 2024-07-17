@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300");
+@import url('https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600;700;800&display=swap');
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right bottom, #873572, black);
+}
+
+a {
+  display: inline-block;
+  color: lightgrey;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  white-space: nowrap;
+  padding: 12px;
+  border: 1px solid white;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.15s ease-in-out;
+}
+
+a:hover {
+  background: rgba(0, 0, 0, 0.23);
+  color: white;
+  transform: scale(1.03);
+  text-decoration: none;
+}
+
+a:active {
+  transform: scale(0.98);
+}
+
+.carousel-container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ddd;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tab-btn {
+  flex: 1;
+  background-color: #ddd;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  font-family: 'Inter', sans-serif;
+  border-radius: 0;
+}
+
+.tab-btn.active {
+  background-color: #000;
+  color: #fff;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 10px 0;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 200px;
+  margin: 0 10px;
+  scroll-snap-align: start;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.card p {
+  margin: 5px 0;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.discount {
+  color: red;
+}
+
+.cart-btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.cart-btn:hover {
+  background-color: #444;
+}
+
+.label {
+  position: absolute;
+  background-color: white;
+  font-family: "Khula", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  opacity: 1;
+  z-index: 3;
+  margin: 0.3rem 0.3rem;
+  color: black;
+  padding: 5px;
+  top: 10px;
+  left: 10px;
+  font-size: 0.8em;
+  border-radius: 5px;
+}
+
+
+
+
+@media (max-width:1025px) {
+  .tabs {
+    flex-direction: column;
+  }
+
+  .carousel-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .carousel-item {
+    width: 140px;
+    
+  }
+
+  .card h3 {
+  
+    font-size: 1em;
+  }
+
+  .card p {
+    font-size: 0.3em;
+  }
+}
+
+@media (max-width: 767px) {
+  html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background: white !important;
+  flex-wrap: wrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+}
+  .tabs{
+  margin-top: 10px;
+    width: 50%;
+  }
+  .carousel-container {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 10px;
+    width: 100vw;
+    box-shadow: none;
+
+  }
+
+  .carousel {
+    overflow-y: scroll;
+
+    height: 90vh;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+    padding-left: 20px; /* Added padding to ensure full visibility of the leftmost item */
+    padding-right: 20px;
+    padding-bottom: 70px;
+    
+  }
+  
+  
+  .carousel-item {     
+    width: 120px;
+    height: fit-content;
+    /* overflow-y: scroll; */
+    height: 310px;
+    margin-bottom: 100px;
+    margin: 0 1px; /* Reduce margin for smaller screens */
+  }
+
+  .card {
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+
+  .card img {
+    height: 150px; /* Adjust image height */
+  }
+
+  .card h3 {
+    font-size: 0.9em;
+    margin: 0;
+  }
+
+  .card p {
+    font-size: 0.8em;
+  }
+
+  .tab-btn {    
+    padding: 5px 5px;
+  }
+  
+  .label {
+    position: absolute;
+    background-color: white;
+    font-family: "Khula", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    opacity: 1;
+    z-index: 3;
+    margin: 0.3rem 0.3rem;
+    color: black;
+    padding: 2px;
+    top: 10px;
+    left: 10px;
+    font-size: 0.8em;
+    border-radius: 5px;
+  }
+  .cart-btn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    margin: 0px;
+    border-radius: 5px;
+  }
+}
